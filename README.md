@@ -21,7 +21,9 @@ Have a great idea, but don't know how to code (or maybe you're just too lazy to 
 
 
 **Contribute by hunting bugs:**
-Every new decent version of the application will have a separate jar release in [releases](https://github.com/Lireoy/OrderSomethingNow/releases). Download the latest version, use the program, oberserve bugs, [report them]https://github.com/Lireoy/OrderSomethingNow/issues/new) if there is any.
+Every new decent version of the application will have a separate jar release in [releases](https://github.com/Lireoy/OrderSomethingNow/releases). Download the latest version, use the program, oberserve bugs, [report them](https://github.com/Lireoy/OrderSomethingNow/issues/new) if there is any.
+
+
 
 
 *Developer: Bence Szabó*
