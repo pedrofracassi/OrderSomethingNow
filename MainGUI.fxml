@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" fx:id="mainBorderPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="OrderSomethingNow.Controller">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <MenuBar>
+                <Menu text="Menu">
+                    <MenuItem text="Price list" onAction="#showItemListDialog"/>
+                    <MenuItem text="Exit" onAction="#handleMenuExitClick"/>
+                </Menu>
+            </MenuBar>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label text="Finished orders" GridPane.columnIndex="0" textAlignment="CENTER"
+                       alignment="CENTER"/>
+                <Label fx:id="finishedOrders" GridPane.rowIndex="1" GridPane.columnIndex="0" textAlignment="CENTER"
+                       alignment="CENTER"/>
+                <Label text="Income" GridPane.columnIndex="1" alignment="CENTER"/>
+                <Label fx:id="incomeDisplay" GridPane.rowIndex="1" GridPane.columnIndex="1" alignment="CENTER"/>
+                <Label text="Sold drinks" GridPane.columnIndex="2" alignment="CENTER"/>
+                <Label fx:id="soldDrinks" text="NOT IN USE" GridPane.rowIndex="1" GridPane.columnIndex="2"
+                       alignment="CENTER"/>
+                <Label text="Money in register" GridPane.columnIndex="3" alignment="CENTER"/>
+                <Label fx:id="moneyInRegister" GridPane.rowIndex="1" GridPane.columnIndex="3" alignment="CENTER"/>
+                <Label text="Time" GridPane.columnIndex="4" alignment="CENTER"/>
+                <Label fx:id="liveClock" GridPane.rowIndex="1" GridPane.columnIndex="4" alignment="CENTER"/>
+                <Label text="Current worker" GridPane.columnIndex="5" alignment="CENTER"/>
+                <Label fx:id="currentLoggedInUser" GridPane.rowIndex="1" GridPane.columnIndex="5" alignment="CENTER"/>
+            </GridPane>
+        </VBox>
+    </top>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="CheeseBurger" style="-fx-font-size: 2em;"
+                    onAction="#handleButtonClickCheeseBurger"/>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="ChickenBurger" GridPane.columnIndex="1"
+                    style="-fx-font-size: 2em;" onAction="#handleButtonClickChickenBurger"/>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="Whopper" GridPane.rowIndex="1"
+                    style="-fx-font-size: 2em;" onAction="#handleButtonClickWhopper"/>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="WhopperJunior" GridPane.columnIndex="1"
+                    GridPane.rowIndex="1" style="-fx-font-size: 2em;" onAction="#handleButtonClickWhopperJunior"/>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="Longer" GridPane.rowIndex="2"
+                    style="-fx-font-size: 2em;" onAction="#handleButtonClickLonger"/>
+            <Button prefHeight="Infinity" prefWidth="Infinity" text="LongerExtreme" GridPane.columnIndex="1"
+                    GridPane.rowIndex="2" style="-fx-font-size: 2em;" onAction="#handleButtonClickLongerExtreme"/>
+        </GridPane>
+    </center>
+    <left>
+        <ListView>
+        </ListView>
+    </left>
+    <bottom>
+        <GridPane BorderPane.alignment="CENTER">
+
+            <Button fx:id="closeRegisterButton" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="0" text="Close register"
+                    alignment="CENTER"
+                    style="-fx-border-color: #ff0000; -fx-border-width: 2px; -fx-font-size: 2em;" onAction="#handleCloseRegister"/>
+            <Button fx:id="openRegisterButton" prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="1" text="Open register"
+                    onAction="#handleOpenRegister" alignment="CENTER"
+                    style="-fx-border-color: #00ff00; -fx-border-width: 3px;  -fx-font-size: 2em; "/>
+            <Button prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="2"
+                    text="Finilize order - NOT IN USE"
+                    alignment="CENTER" style="-fx-font-size: 2em; "/>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="30"
+                                   halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="30"
+                                   halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="40"
+                                   halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="20.0" prefHeight="100.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+    </bottom>
+</BorderPane>
