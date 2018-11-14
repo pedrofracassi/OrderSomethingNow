@@ -17,22 +17,27 @@
     <bottom>
         <GridPane BorderPane.alignment="CENTER">
 
-            <Button minHeight="100" prefWidth="512" text="Kassza nyitás"/>
-            <Button minHeight="100" prefWidth="512" text="Kassza zárás" GridPane.columnIndex="1"/>
+            <Button prefWidth="Infinity" prefHeight="Infinity" GridPane.columnIndex="0" text="Kassza nyitás" alignment="CENTER"/>
+            <Button prefWidth="Infinity" prefHeight="Infinity"  GridPane.columnIndex="1" text="Kassza zárás" alignment="CENTER"/>
+            <Button prefWidth="Infinity" prefHeight="Infinity"  GridPane.columnIndex="2" text="Rendelés lezárása" alignment="CENTER"/>
             <columnConstraints>
-                <ColumnConstraints/>
-                <ColumnConstraints/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="30"
+                                   halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="30"
+                                   halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="341.0" percentWidth="40"
+                                   halignment="CENTER"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints/>
+                <RowConstraints minHeight="20.0" prefHeight="100.0" vgrow="SOMETIMES"/>
             </rowConstraints>
         </GridPane>
     </bottom>
     <center>
         <GridPane BorderPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
